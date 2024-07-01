@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keys in DB</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/assignment1.css">
+</head>
+<body>
+    <div class="container">
+        <p class="title">Keys.</p>
+        <p>
+            <p class="question">What are Keys in DB?</p>
+            <p class="text">Keys are the unique identifier used in DBMS to uniquely identify a tuple(s)or rows n a table.</p>   
+        </p>
+        <p class="question">Types of Key</p>
+        <p> 
+            <p class="terms">Primary Key</p>
+            <p class="text">A primary key is a field (or a combination of fields) that uniquely identifies each record in a table. It ensures that every record is unique and not null.<br><br><u>For Example:</u> <br></p>   
+            <P class="text">In this table <b>ID</b> can be taken as a primary key.</P>
+            <table border="1">
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Course</th>
+                    <th>CitizenshipNumber</th>
+                    <th>PANNumber</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Ramesh Sharma</td>
+                    <td>Kathmandu</td>
+                    <td>Mathematics</td>
+                    <td>2233445566</td>
+                    <td>11223344</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Sita Rana</td>
+                    <td>Pokhara</td>
+                    <td>Physics</td>
+                    <td>3344556677</td>
+                    <td>22334455</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ganesh Bista</td>
+                    <td>Lalitpur</td>
+                    <td>Chemistry</td>
+                    <td>4455667788</td>
+                    <td>33445566</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Radha Shrestha</td>
+                    <td>Bhaktapur</td>
+                    <td>Biology</td>
+                    <td>5566778899</td>
+                    <td>44556677</td>
+                </tr>
+            </table>
+        </p>
+        <p>
+            <p class="terms">Foreign Key</p>
+    <p class="text">A foreign key is a field (or a collection of fields) in one table that uniquely identifies a row of another table. It is used to establish a link between the data in the two tables.<br><br><u>For Example:</u> <br></p>   
+    <p class="text">In the first table, <b>CourseID</b> is the primary key. In the second table, <b>CourseID</b> acts as a foreign key, linking the two tables.</p>
+    
+    <p><b>Courses Table:</b> The <b>CourseID</b> is the primary key.</p>
+    <table border="1">
+        <tr>
+            <th>CourseID</th>
+            <th>CourseName</th>
+            <th>Credits</th>
+        </tr>
+        <tr>
+            <td>101</td>
+            <td>Mathematics</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>Physics</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>Chemistry</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>104</td>
+            <td>Biology</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+    <p><b>Students Table:</b> The <b>CourseID</b> is the foreign key, linking to the Courses table.</p>
+    <table border="1">
+        <tr>
+            <th>StudentID</th>
+            <th>Name</th>
+            <th>CourseID</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Ramesh Sharma</td>
+            <td>101</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Sita Rana</td>
+            <td>102</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Ganesh Bista</td>
+            <td>103</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Radha Shrestha</td>
+            <td>104</td>
+        </tr>
+    </table>
+        </p>
+    
+        <p>
+            <p class="terms">Composite Key</p>
+            <p class="text">A composite key is a key that consists of two or more attributes that uniquely identify an entity occurrence (record).<br><br><u>For Example:</u> <br></p>   
+            <p class="text">In this table, <b>StudentID</b> and <b>CourseID</b> together can be taken as a composite key.</p>
+            <table border="1">
+                <tr>
+                    <th>StudentID</th>
+                    <th>CourseID</th>
+                    <th>Grade</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>101</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>102</td>
+                    <td>B</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>103</td>
+                    <td>A</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>104</td>
+                    <td>C</td>
+                </tr>
+            </table>
+        </p>
+    
+        <p>
+            <p class="terms">Candidate Key</p>
+            <p class="text">A candidate key is a field or combination of fields that can qualify as a unique key in a database. There can be multiple candidate keys in a table.<br><br><u>For Example:</u> <br></p>   
+            <p class="text">In this table, <b>Email</b> and <b>PhoneNumber</b> can be taken as candidate keys.</p>
+            <table border="1">
+                <tr>
+                    <th>ID</th>
+                    <th>Email</th>
+                    <th>PhoneNumber</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>ramesh@example.com</td>
+                    <td>9876543210</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>sita@example.com</td>
+                    <td>9876543211</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>ganesh@example.com</td>
+                    <td>9876543212</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>radha@example.com</td>
+                    <td>9876543213</td>
+                </tr>
+            </table>
+        </p>
+    
+        <p>
+            <p class="terms">Alternate Key</p>
+            <p class="text">An alternate key is any candidate key that is not the primary key. These are also unique and can identify records uniquely.<br><br><u>For Example:</u> <br></p>   
+            <p class="text">In this table, <b>Email</b> can be taken as an alternate key if <b>PhoneNumber</b> is the primary key.</p>
+            <table border="1">
+                <tr>
+                    <th>PhoneNumber</th>
+                    <th>Email</th>
+                    <th>Name</th>
+                </tr>
+                <tr>
+                    <td>9876543210</td>
+                    <td>ramesh@example.com</td>
+                    <td>Ramesh Sharma</td>
+                </tr>
+                <tr>
+                    <td>9876543211</td>
+                    <td>sita@example.com</td>
+                    <td>Sita Rana</td>
+                </tr>
+                <tr>
+                    <td>9876543212</td>
+                    <td>ganesh@example.com</td>
+                    <td>Ganesh Bista</td>
+                </tr>
+                <tr>
+                    <td>9876543213</td>
+                    <td>radha@example.com</td>
+                    <td>Radha Shrestha</td>
+                </tr>
+            </table>
+        </p>
+
+        <a href="../index.html">Go to Home Page</a>
+
+    </div>
+    
+    
+</body>
+</html>
