@@ -45,3 +45,17 @@
     font-size: 40px;
     
 }
+
+.gobackBtn {
+    border: none;
+    color: white;
+    background-color: black;
+    font-size: 50px;
+    margin: 30px -80px;
+    transition: transform 0.5s;
+    cursor: pointer;
+    
+}
+.gobackBtn:hover {
+    transform: scale(1.2);
+}
