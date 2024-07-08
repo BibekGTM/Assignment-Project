@@ -41,3 +41,7 @@
 .assignments-list li a:hover {
     color: white;
 }
+.text ol {
+    font-size: 40px;
+    
+}
