@@ -76,7 +76,7 @@ html, body {
 
 .home {
     display: flex;
-    height: 90vh;
+    height: 100vh;
     align-items: center;
     padding: 0 10% 0;
 }
@@ -84,18 +84,18 @@ html, body {
     max-width: 700px;
 }
 .home-content h1 {
-    font-size: 55px;
+    font-size: 40px;
     font-weight: 700;
-    line-height: 1.8rem;
+    line-height: 2.0rem;
 }
 .home-content h3 {
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 700;
     color: rgb(148, 148, 148);
     margin-bottom: 40px;
 }
 .home-content p {
-    font-size: 20px;
+    font-size: 17px;
     margin: 20px 0 40px;
 }
 .home-content .btn-box {
