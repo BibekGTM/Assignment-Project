@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data File Handling</title>
+    <link rel="stylesheet" href="../css/notesstyle.css">
+    <link rel="stylesheet" href="../css/assignment1.css">
+    <link rel="stylesheet" href="../css/codeeditor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+</head>
+<body>
+    <div class="container">
+        <button class="gobackBtn" onclick="goBack()" ><i class="fas fa-arrow-left"></i></button>
+
+        <script>
+            function goBack() {
+            window.history.back();
+        }
+        </script>
+        <p class="title">File Handling In C.</p>
+
+        <div class="body">
+            <div class="buttons">
+                <button class="previous" onclick="location.href = 'datafilehandling1.html';">Previous</button>
+                <button class="next">Next</button>
+            </div>
+            <div class="question">
+                <h4>Question 2:</h4>
+                <p>Write a C program to create a new data file and store an integer in it using putw(). Read
+                    the integer afterwards using getw().</code>.</p>
+            </div>
+    
+            <div class="code-output-section">
+                <div class="code-block">
+                    <h3>Code</h3>
+                    <pre><code>
+#include &lt;stdio.h&gt;
+
+int main() {
+    FILE *file;
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+                            
+    file = fopen("data.bin", "wb");
+    putw(num, file);
+    fclose(file);
+                            
+    file = fopen("data.bin", "rb");
+    num = getw(file);
+    printf("Integer read from file: %d\n", num);
+    fclose(file);
+    printf("Run by Bibek Gautam\n");
+    return 0;
+}
+                    </code></pre>
+                </div>
+                
+                <div class="output-block">
+                    <h3>Output</h3>
+                    <div class="output">
+                        Enter a number: 4<br>Integer read from file: 4<br>Run by Bibek Gautam
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+
+    </div>
+    
+</body>
+</html>
